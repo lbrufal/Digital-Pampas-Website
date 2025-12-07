@@ -1018,6 +1018,14 @@ nav {
     visibility: visible;
 }
 
+/* Clock icon for coming soon links */
+.footer-section ul li a.coming-soon .clock-icon {
+    color: #6a6a6a;
+    margin-left: 0.25rem;
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+}
+
 .footer-bottom {
     padding-top: var(--space-lg);
     border-top: 1px solid var(--glass-border);
