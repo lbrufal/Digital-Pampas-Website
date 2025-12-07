@@ -961,6 +961,63 @@ nav {
     color: var(--accent-cyan);
 }
 
+/* Coming Soon Links */
+.footer-section ul li a.coming-soon {
+    color: #6a6a6a;
+    cursor: not-allowed;
+    position: relative;
+    pointer-events: auto;
+}
+
+.footer-section ul li a.coming-soon:hover {
+    color: #6a6a6a;
+}
+
+.footer-section ul li a.coming-soon::after {
+    content: 'Coming Soon';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--glass-bg);
+    color: var(--accent-cyan);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    pointer-events: none;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+}
+
+.footer-section ul li a.coming-soon::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--glass-border) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    pointer-events: none;
+    z-index: 100;
+}
+
+.footer-section ul li a.coming-soon:hover::after,
+.footer-section ul li a.coming-soon:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
 .footer-bottom {
     padding-top: var(--space-lg);
     border-top: 1px solid var(--glass-border);
